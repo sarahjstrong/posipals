@@ -15,7 +15,7 @@ CREATE TABLE messages (
   message_id SERIAL,
   message_username varchar(50) NOT NULL,
   location varchar(50) NOT NULL,
-  message varchar(500) NOT NULL,
+  message text NOT NULL,
   CONSTRAINT PK_message PRIMARY KEY (message_id),
   CONSTRAINT FK_message_username FOREIGN KEY (message_username) REFERENCES users(username)
 );

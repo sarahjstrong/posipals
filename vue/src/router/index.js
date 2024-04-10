@@ -6,6 +6,9 @@ import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginView.vue';
 import LogoutView from '../views/LogoutView.vue';
 import RegisterView from '../views/RegisterView.vue';
+import SubmitView from '../views/SubmitView.vue';
+import ProfileView from '../views/ProfileView.vue';
+
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -25,11 +28,27 @@ const routes = [
     }
   },
   {
-    path: "/login",
-    name: "login",
+    path: '/login',
+    name: 'login',
     component: LoginView,
     meta: {
       requiresAuth: false
+    }
+  },
+  {
+    path: '/submit',
+    name: 'submit',
+    component: SubmitView,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: ProfileView,
+    meta: {
+      requiresAuth: true
     }
   },
   {

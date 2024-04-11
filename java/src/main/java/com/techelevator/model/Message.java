@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.validation.constraints.NotNull;
 
 public class Message {
-    @JsonIgnore
     private int id;
     @NotNull
     private String username;
